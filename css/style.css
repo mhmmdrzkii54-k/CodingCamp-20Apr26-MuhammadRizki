@@ -1,0 +1,266 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #ff0101, #ffffff);
+  --card-bg: rgb(253, 83, 83);
+  --text-color: #f5f5f5;
+  --primary: #ff0000;
+  --button-bg: #fa0000;
+  --button-text: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #ccc;
+  --timer-color: #000000;
+}
+
+body.dark {
+  --bg-gradient: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  --card-bg: #1e1e1e;
+  --text-color: #ffffff;
+  --primary: #ff4d4d;
+  --button-bg: #444;
+  --button-text: #ffffff;
+  --input-bg: #000000;
+  --input-border: #555;
+  --timer-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card h3 {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+#timer {
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin: 20px 0;
+  color: var(--timer-color);
+}
+
+#time {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--timer-color);
+}
+
+#greeting {
+  font-size: 0px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+#date {
+  font-size: 18px;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--button-bg);
+  color: var(--button-text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#taskInput {
+  flex: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  padding: 6px 0;
+}
+
+li span {
+  flex: 1;
+  text-align: left;
+  cursor: pointer;
+}
+
+li button {
+  padding: 6px 12px;
+}
+
+li.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.link-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#linkName,
+#linkURL {
+  flex: 1;
+  padding: 10px;
+}
+
+.link-actions button {
+  white-space: nowrap;
+}
+
+#links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.link-box {
+  position: relative;
+  display: inline-block;
+}
+
+.link-box a {
+  display: inline-block;
+  padding: 12px 30px 12px 15px;
+  background: #ff0000;
+  color: #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.delete-link {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.task-left input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.delete-task {
+  background: red;
+  color: white;
+}
+
+.red-btn {
+  background: red;
+  color: white;
+}
+
+.card h3.center-title {
+  text-align: center;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.timer-buttons button {
+  min-width: 80px;
+}
+
+.timer-set {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.timer-set input {
+  width: 80px;
+  text-align: center;
+}
+
+#customGreeting {
+  text-align: center;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: #000000;
+  transition: background 0.3s;
+}
+
+.custom-name {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
